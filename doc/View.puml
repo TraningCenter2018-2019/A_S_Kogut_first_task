@@ -1,0 +1,19 @@
+@startuml
+interface View  {
+    paintGrid()
+    printCrossword()
+    printWord(word : Word)
+}
+
+abstract class Menu {
+    printMenu()
+}
+
+class UserMenu extends Menu {
+    printMenu()
+}
+
+class CreatorMenu extends Menu {
+    printMenu()
+}
+@enduml

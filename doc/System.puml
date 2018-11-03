@@ -1,0 +1,7 @@
+@startuml
+class Sys   {
+    setMode(mode : int)
+    setOperation(op : int)
+    inputNumber(int a, int b) : int
+}
+@enduml

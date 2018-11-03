@@ -1,0 +1,44 @@
+@startuml
+class Creator
+{
+    createCrossword(words : List<Word>, width : int, height : int) : Crossword
+    inputWord(word : String, description : String) : Word
+}
+
+class User
+{
+    inputWord(word : String)
+    checkCrossword()
+}
+
+class Crossword
+{
+    cells : Cell[][]
+    words : List<Word>
+    Crossword(int width, int height)
+    setWord(Word word, int startX, int startY, boolean position)
+    deleteWord(Word word)
+    chooseWord() : Word
+    toForm()
+    getCrossword() : Cell[][]
+    getWords() : List<Word>
+}
+
+class Word
+{
+    number : int
+    x0 : int
+    y0 : int
+    word : String
+    userWord : String
+    description : String
+    position : boolean
+}
+
+class Cell
+{
+    X : int
+    Y : int
+    value : char
+}
+@enduml
